@@ -1,0 +1,39 @@
+<!DOCTYPE html>{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    {% include '_page-device-fit-meta.html' %}
+
+    {% include '_page-social-meta.html' %}
+
+    {% include '_page-common-styles.html' %}
+
+    {% include '_page-icons-meta.html' %}
+
+    <title>Статья о чем-то важном</title>
+  </head>
+  <body>
+    {% include '_page-navbar.html' %}
+
+    <main id="panel">
+      <div id="panel-content">
+        {% include '_page-mobile-navbar.html' %}
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <h1>{{ title }}</h1>
+              <small class="post-meta">
+                <a href="post.html">John Doe</a>, <a href="category.html">Nature &amp; Culture</a>, <a href="post.html">2 days ago</a>
+              </small>
+              {{ article_html|safe }}
+            </div>
+          </div>
+        </div>
+        {% include '_page-footer.html' %}
+      </div>
+    </main>
+
+    {% include '_page-common-js.html' %}
+  </body>
+</html>
